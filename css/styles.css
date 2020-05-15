@@ -1,12 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aquamarine;
+    background-image: url("../img/fundo.jpg");
     background-size: auto 100vh;
     font-family: Arial;
     height: 100vh;
+    font-size: 12px;
+}
+
+/*  se a tela tiver pelo menos 400 pixel*/
+/* brakepoint */
+@media (min-width: 400px){
+    body{
+        font-size: 14px;
+    }
+}
+@media (min-width: 600px){
+    body{
+        font-size: 18px;
+    }
+}
+
+header{
+    /* pegar a tela toda  */
+    height: 100vh;
+    /* centralizando */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color: aliceblue;
+    /* fixar o menu sobre os outros elementos no eixo z  */
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .menu ul {
@@ -16,6 +49,17 @@ body {
 
 .menu li {
     list-style: none;
+}
+
+.menu a {
+    /* display block pra organizar como o padding vai funcionar */
+    display: block;
+    padding: 10px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: teal;
 }
 
 a:hover {
@@ -28,6 +72,20 @@ a:hover {
     text-align: center;
 }
 
+.site-title{
+    /* quatro vezes o tamanho normal */
+    font-size: 4em;
+}
+
 .site-subtitle{
     font-style: italic;
+}
+
+section{
+    color: aliceblue;
+}
+
+.img-portifolio{
+    height: 180px;
+    width: 180px;
 }
