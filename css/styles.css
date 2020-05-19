@@ -10,6 +10,7 @@ body {
     font-family: Arial;
     height: 100vh;
     font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
 }
 
 /*  se a tela tiver pelo menos 400 pixel*/
@@ -75,14 +76,20 @@ a:hover {
 .site-title{
     /* quatro vezes o tamanho normal */
     font-size: 4em;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .site-subtitle{
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8em;
 }
 
 section{
     color: aliceblue;
+}
+.portifolio h2{
+    font-family: 'Press Start 2P', cursive;
 }
 
 .img-portifolio{
