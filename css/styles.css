@@ -88,11 +88,49 @@ a:hover {
 section{
     color: aliceblue;
 }
-.portifolio h2{
-    font-family: 'Press Start 2P', cursive;
+
+.portifolio{
+    padding: 2em;
+    height: 100vh;
 }
 
-.img-portifolio{
+.portifolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+@media(min-width:560px){
+    .portifolio .grid{
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media(min-width:880px){
+    .portifolio .grid{
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+    }
+}
+
+.portifolio figure{
+    text-align: center;
+}
+
+.portifolio h2{
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+.img-portfolio{
     height: 180px;
-    width: 180px;
+    width: 240px;
+}
+
+@media(min-width:1200px){
+    .img-portfolio{
+        height: 10em;
+        width: auto;
+    }
 }
