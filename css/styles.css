@@ -107,8 +107,10 @@ section{
 
 @media(min-width:880px){
     .portifolio .grid{
-        grid-template-columns: repeat(3, 240px);
+        grid-template-columns: repeat(3, 260px);
+        align-content: center;
         justify-content: center;
+        height: calc(100vh - 5.5em - 48px );
     }
 }
 
@@ -126,11 +128,14 @@ section{
 .img-portfolio{
     height: 180px;
     width: 240px;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 10px;
 }
-
+/* 
 @media(min-width:1200px){
     .img-portfolio{
-        height: 10em;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
-}
+} */
