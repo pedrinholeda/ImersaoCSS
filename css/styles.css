@@ -41,6 +41,8 @@ header{
     position: fixed;
     width: 100vw;
     top: 0;
+    /* Ajustar o eixo z */
+    z-index: 1;
 }
 
 .menu ul {
@@ -56,6 +58,13 @@ header{
     /* display block pra organizar como o padding vai funcionar */
     display: block;
     padding: 10px 20px;
+    transition: background-color 1s,color 2s;
+}
+.menu a:active,
+.menu a:hover{
+    /* display block pra organizar como o padding vai funcionar */
+   background-color: teal;
+   color: whitesmoke;
 }
 
 a{
@@ -65,6 +74,18 @@ a{
 
 a:hover {
     text-decoration: underline;
+}
+.titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .site-subtitle,
@@ -88,10 +109,10 @@ a:hover {
 section{
     color: aliceblue;
 }
-
+.contato,
 .portifolio{
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .portifolio .grid{
@@ -117,7 +138,7 @@ section{
 .portifolio figure{
     text-align: center;
 }
-
+.contato h2,
 .portifolio h2{
     font-family: 'Press Start 2P', cursive;
     color: whitesmoke;
@@ -131,6 +152,25 @@ section{
     object-fit: cover;
     object-position:center;
     border-radius: 10px;
+    transition: transform 500ms ;
+}
+.img-portfolio:hover{
+    transform: scale(1.2);
+}
+
+.contato .icons{
+    text-align: center;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 5em;
+    transition: text-shadow 0.5s;
+}
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow:0px 0px 13px whitesmoke;
 }
 /* 
 @media(min-width:1200px){
